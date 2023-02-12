@@ -1,0 +1,105 @@
+/* To implement dropDowns, we have these styling elements:
+
+     - NavRouter:  this is the whole navigation bar (that is created by MakeNavRouter.js)
+
+     - NavGroup:   a div that either contains a link or contains a NavGroup header followed by
+                   a SubMenu (that contains links).
+
+     - SubMenu:    initially hidden, but becomes visible when its associated NavGroup header
+                   is clicked.
+*/
+
+.NavRouter {
+    white-space: nowrap;  /* do not want any text to wrap in the NavRouter */
+    color:black;
+}
+
+.NavRouter a {
+    text-decoration: none;  /* Do not want links in the NavRouter to be underlined */
+    color:black;
+}
+
+.NavRouter .NavGroup {
+
+    /* .NavGroup is a parent of SubMenu. Since we want to right justify the SubMenu with its parent,
+    we assign "position relative" to .NavGroup and "position absolute" to the .SubMenu      */
+    position: relative;
+
+    /*border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;*/
+    margin-right:0.1rem;
+    padding:0.35rem;
+    padding-top:0.45rem;
+    padding-bottom:0.25rem;
+
+    /* "display:inline-block" treats/positions divs like words (bottom justified)
+    instead of like block/paragraph elements  (top justified) */
+    display: inline-block;
+
+    font-size: 1rem;
+    letter-spacing:0.05rem;
+    font-weight:bold;
+    cursor: pointer;  /* mouse pointer turns to "hand" when user hovers over a NavGroup */
+}
+
+.NavRouter .SubMenu a {
+    font-size: 0.75rem;
+    display: block;         /* all SubMenu links start on a new line */
+    border-bottom: 1px solid  #997279; /* a little darker than the submenu background */
+}
+
+.NavRouter .SubMenu a:hover {
+    color: goldenrod;
+}
+
+.NavRouter .SubMenu {
+
+    letter-spacing: 0.05rem; /* space out the letters a little bit */
+    line-height: 1.25rem;
+
+    margin-top: 0.5rem; /* start the SubMenu a little lower from the dropHeader */
+    padding: 0.25rem 0.5rem; /* first is top/bottom, second is left/right */
+
+    background-color:  #c6f200; /* #CCCCCC;*/
+
+    border-radius: 0.25rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.6);
+
+    /* animate hide and show (slow down the changes so you can see fading in or zooming in). */
+    transition: all 1s ease 0s;
+
+    /* position absolute aligns with its 1st non static parent (.NavGroup)  */
+    position: absolute;
+    right: 0.75rem;  /* aligns right this absolute element with its relative parent */
+
+    z-index: 3;  /* higher z-index places the element on top, not underneath */
+}
+
+
+/* The JS code adds and removes class .show and class .hide to/from SubMenu and this
+   provides some animation due to the transition styled in .SubMenu */
+/* when JS code adds class "show" to dropConent, the SubMenu is right aligned (because of right:0px))with its
+   first non-static parent, NavGroup (which is position:relative) */
+.NavRouter .show {
+    opacity: 1; /* make it 100% solid (visible) */
+    visibility: visible;
+}
+
+.NavRouter .hide {
+    opacity: 0; /* solidness 0% */
+    visibility: hidden;
+}
+
+/* Another way you can hide/show SubMenu elements -- zoom in from right...
+
+To use this you'd also have to modify the rule for SubMenu to make it initially hidden
+using the right property -- instead of using  opacity and visibility.
+
+.NavRouter .show {
+    right: 0px;
+}
+
+.NavRouter .hide {
+    right: -500px;
+}
+*/
