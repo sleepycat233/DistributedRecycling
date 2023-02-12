@@ -37,7 +37,7 @@ function ownerContent() {
         <div>
             <div class="card-deck">
                 <div class="card">
-                  <img class="card-img-top" src="./assets/pet_example.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="../assets/pet_example.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Polythelene Terephtalate (PET or PETE)</h5>
                     <p class="card-text">This Type 1 plastic is the most commonly used thermoplastic polymer in the world. It is found
@@ -46,7 +46,7 @@ function ownerContent() {
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="./assets/hpde_examples.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="../assets/hpde_examples.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">High-Density Polyethylene (HDPE)</h5>
                     <p class="card-text">This Type 2 plastic is one of the most popular materials used in manufacturing today due to the stress the materials can withstand.
@@ -55,7 +55,7 @@ function ownerContent() {
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="./assets/pvc_example.png" alt="Card image cap">
+                  <img class="card-img-top" src="../assets/pvc_example.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Polyvinyl Chloride (PVC)</h5>
                     <p class="card-text">This Type 3 plastic is an economical and versatile thermoplastic polymer widely that could be found in PVC pipes,
@@ -67,7 +67,7 @@ function ownerContent() {
         <div>
             <div class="card-deck">
                 <div class="card">
-                  <img class="card-img-top" src="./assets/ldpe_example.png" alt="Card image cap">
+                  <img class="card-img-top" src="../assets/ldpe_example.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Low-Density Polyethylene (LDPE)</h5>
                     <p class="card-text">This Type 4 plastic is a soft, flexible, and lightweight plastic material. It is used
@@ -76,7 +76,7 @@ function ownerContent() {
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="./assets/pp_example.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="../assets/pp_example.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Polypropylene (PP)</h5>
                     <p class="card-text">This Type 5 plastic is used in a wide variety of applications. It can be found in yogurt cups, straws
@@ -85,7 +85,7 @@ function ownerContent() {
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="./assets/ps_examples.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="../assets/ps_examples.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">PolyStyrene (PS)</h5>
                     <p class="card-text">This Type 6 plastic is a useful plastic due to its application as a foam. It can be commonly found in
@@ -96,7 +96,7 @@ function ownerContent() {
         </div>
     </div>
 
-    <img src="./assets/plastic_examples.avif" id="overview-image">
+    <img src="../assets/plastic_examples.png" id="overview-image">
 
     <div id="thrid-">
         <h2 class="titles">III. What machines would you need</h2>
