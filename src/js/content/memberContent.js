@@ -1,85 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
+function memberContent() {
 
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/member.css">
-    <style>
-        #map {
-            height: 100%;
-        }
-
-        html,
-        body {
-            height: 100%;
-            margin: 20px;
-            padding: 0;
-        }
-    </style>
-    <script>
-        let map;
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
-                center: new google.maps.LatLng(39.978728, -75.146136),
-                zoom: 15,
-            });
-
-
-            const marker = new google.maps.Marker({
-                position: { lat: 39.980572, lng: -75.139262 },
-                map,
-                optimized: true
-            })
-
-            marker.addListener("click", () => {
-                document.getElementById("card1").scrollIntoView({ behavior: 'smooth'});
-            });
-
-
-
-
-            const marker2 = new google.maps.Marker({
-                position: { lat: 39.974793, lng: -75.141611 },
-                map,
-                optimized: true
-            })
-            marker2.addListener("click", () => {
-                document.getElementById("card2").scrollIntoView({ behavior: 'smooth'});
-            });
-
-            const marker3 = new google.maps.Marker({
-                position: { lat: 39.975628, lng: -75.154040 },
-                map,
-                optimized: true
-            })
-            marker3.addListener("click", () => {
-                document.getElementById("card3").scrollIntoView({ behavior: 'smooth'});
-            });
-
-            const marker4 = new google.maps.Marker({
-                position: { lat: 39.984660, lng: -75.152470 },
-                map,
-                optimized: true
-            })
-            marker4.addListener("click", () => {
-                document.getElementById("card4").scrollIntoView({ behavior: 'smooth'});
-            });
-        }
-
-
-        window.initMap = initMap;
-    </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-</head>
+    var content = /* html */
+        `
 
 <body>
-    <div id="map"></div>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-        defer></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"
+        defer>
+    </script>
+
+    <div id="map"></div>
+
 
     <div id="padding"></div>
 
@@ -155,16 +87,11 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 </body>
+    `;
 
-</html>
+    var ele = document.createElement("div");
+    ele.innerHTML = content;
+
+    return ele;
+}

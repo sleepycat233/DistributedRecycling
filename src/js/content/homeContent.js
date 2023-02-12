@@ -29,8 +29,10 @@ function homeContent() {
         <form action="/action_page.php">
           <label for="zipcode">zipcode:</label><br />
           <input type="number" maxlength="5" /><br />
-          <input type="submit" value="Find" />
+            <button class="btn" onclick=inject(memberContent())> submit</button>
         </form>
+
+
       </div>
     </div>
     `;
