@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 20px;
+            padding: 0;
+        }
+    </style>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: new google.maps.LatLng(39.978728, -75.146136),
+                zoom: 15,
+            });
+
+
+            const marker = new google.maps.Marker({
+                position: { lat: 39.980572, lng: -75.139262 },
+                map,
+                optimized: true
+            })
+
+            marker.addListener("click", () => {
+                document.getElementById("card1").scrollIntoView({ behavior: 'smooth'});
+            });
+
+
+
+
+            const marker2 = new google.maps.Marker({
+                position: { lat: 39.974793, lng: -75.141611 },
+                map,
+                optimized: true
+            })
+            marker2.addListener("click", () => {
+                document.getElementById("card2").scrollIntoView({ behavior: 'smooth'});
+            });
+
+            const marker3 = new google.maps.Marker({
+                position: { lat: 39.975628, lng: -75.154040 },
+                map,
+                optimized: true
+            })
+            marker3.addListener("click", () => {
+                document.getElementById("card3").scrollIntoView({ behavior: 'smooth'});
+            });
+
+            const marker4 = new google.maps.Marker({
+                position: { lat: 39.984660, lng: -75.152470 },
+                map,
+                optimized: true
+            })
+            marker4.addListener("click", () => {
+                document.getElementById("card4").scrollIntoView({ behavior: 'smooth'});
+            });
+
+            // const iconBase =
+            //     "https://maps.google.com/mapfiles/kml/paddle/";
+            // const icons = {
+            //     red: {
+            //         icon: iconBase + "red-circle.png",
+
+            //     },
+            // };
+            // const features = [
+            //     {
+            //         position: new google.maps.LatLng(39.980572, -75.139262),
+            //         type: "red",
+            //     },
+
+            //     {
+            //         position: new google.maps.LatLng(39.974793, -75.141611),
+            //         type: "red",
+            //     },
+            //     {
+            //         position: new google.maps.LatLng(39.975628, -75.154040),
+            //         type: "red",
+            //     },
+            //     {
+            //         position: new google.maps.LatLng(39.984660, -75.152470),
+            //         type: "red",
+            //     },
+
+            // ];
+
+            // // Create markers.
+            // for (let i = 0; i < features.length; i++) {
+            //     const marker = new google.maps.Marker({
+            //         position: features[i].position,
+            //         icon: icons[features[i].type].icon,
+            //         map: map,
+            //     });
+
+
+            // }
+        }
+
+
+        window.initMap = initMap;
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer></script>
+
+    <div id="padding"></div>
+
+    <div id="card1" class="card mb-3" style="max-width: 100%;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="./assets/owner1.png" class="card-img">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">David Stanley</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices neque
+                        in quam tincidunt malesuada ac in eros. Aliquam ultrices viverra dignissim. Proin sed magna non
+                        diam bibendum mattis sed a tortor. Vivamus iaculis leo elit, vel suscipit elit laoreet vel. In
+                        eget scelerisque diam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="padding">
+    </div>
+    <div id="card2" class="card mb-3" style="max-width: 100%;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="./assets/owner2.png" class="card-img">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Dana Holloway</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices neque
+                        in quam tincidunt malesuada ac in eros. Aliquam ultrices viverra dignissim. Proin sed magna non
+                        diam bibendum mattis sed a tortor. Vivamus iaculis leo elit, vel suscipit elit laoreet vel. In
+                        eget scelerisque diam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="padding">
+    </div>
+    <div id="card3" class="card mb-3" style="max-width: 100%;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="./assets/owner2.png" class="card-img">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Courtney Mcgee</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices neque
+                        in quam tincidunt malesuada ac in eros. Aliquam ultrices viverra dignissim. Proin sed magna non
+                        diam bibendum mattis sed a tortor. Vivamus iaculis leo elit, vel suscipit elit laoreet vel. In
+                        eget scelerisque diam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="padding">
+    </div>
+    <div id="card4" class="card mb-3" style="max-width: 100%;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="./assets/owner1.png" class="card-img">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Mabel Mcdaniel</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices neque
+                        in quam tincidunt malesuada ac in eros. Aliquam ultrices viverra dignissim. Proin sed magna non
+                        diam bibendum mattis sed a tortor. Vivamus iaculis leo elit, vel suscipit elit laoreet vel. In
+                        eget scelerisque diam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
