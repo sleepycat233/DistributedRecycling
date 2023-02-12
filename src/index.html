@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributed Recycling and Additive Manufacturing</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/NavRouter.css">
+</head>
+<body>
+    <div id="header">
+        header
+        <div id="nav"></div>
+    </div>
+    <div id="content">
+
+    </div>
+    <div id="footer">
+        footer
+    </div>
+    <script src="js/resuable/MakeNavRouter.js"></script>
+    <script src="js/content/homeContent.js"></script>
+    <script>
+        var myNavList = [
+            {
+                linkText: "Home", linkURL: "#/home", action: homeContent
+            },
+            {
+                header: "Info",
+                subMenu: [
+                    { linkText: "Non-Working" },
+                    { linkText: "About us", linkURL: "#/aboutus", action: homeContent }
+                ]
+            },
+        ];
+
+        var myNav = MakeNavRouter({
+                navId: "nav", // this is where the nav bar will be injected
+                navList: myNavList, // the list of link objects (linkText, linkURL, actions)
+                contentId: "content", // the id where content is to be injected
+                startLink: "#/home"     // routing will set this as the first link.
+        });
+    </script>
+</body>
+</html>
