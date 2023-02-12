@@ -7,6 +7,10 @@ body {
     background-color: rgb(111, 249, 164);
 }
 
+#content {
+    margin-top: 6rem;
+}
+
 #header {
     position: fixed;
     top: 0;
