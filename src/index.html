@@ -7,6 +7,7 @@
     <title>Distributed Recycling and Additive Manufacturing</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/member.css">
     <link rel="stylesheet" href="css/NavRouter.css">
 </head>
 <body>
@@ -21,7 +22,12 @@
         footer
     </div>
     <script src="js/resuable/MakeNavRouter.js"></script>
+    <script src="js/resuable/MakeMap.js"></script>
+
     <script src="js/content/homeContent.js"></script>
+    <script src="js/content/memberContent.js"></script>
+    <script src="js/content/ownerContent.js"></script>
+
     <script>
         var myNavList = [
             {
@@ -42,6 +48,11 @@
                 contentId: "content", // the id where content is to be injected
                 startLink: "#/home"     // routing will set this as the first link.
         });
+
+        function inject(what) {
+            document.getElementById("content").innerHTML = "";
+            document.getElementById("content").appendChild(what);
+        }
     </script>
 </body>
 </html>
