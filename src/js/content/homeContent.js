@@ -22,15 +22,17 @@ function homeContent() {
     <div class="grid-container">
       <div class="column 1" ;>
         <h2>I want to be a shop owner</h2>
-        <button id="get_started">get started</button>
+        <button class="btn" onclick=inject(ownerContent())>learn more</button>
       </div>
       <div class="column 2" ;>
         <h2>I want to be a member</h2>
         <form action="/action_page.php">
           <label for="zipcode">zipcode:</label><br />
           <input type="number" maxlength="5" /><br />
-          <input type="submit" value="Find" />
+            <button class="btn" onclick=inject(memberContent())>submit</button>
         </form>
+
+
       </div>
     </div>
     `;
