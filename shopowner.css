@@ -1,0 +1,30 @@
+body{
+    height: 100%;
+    margin: 20px;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 20px;
+  }
+
+  .border {
+    border: solid 1px black;
+  }
+th{
+   text-align: center; 
+}
+td{
+    width:50%;
+}
+
+.card-deck{
+    margin-top:20px;
+}
+
+#overview-image {
+  margin-top:20px;
+  width: 100%;
+}
