@@ -2,14 +2,6 @@ function memberContent() {
 
     var content = /* html */
         `
-
-<body>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"
-        defer>
-    </script>
-
     <div id="map"></div>
 
 
@@ -87,7 +79,6 @@ function memberContent() {
             </div>
         </div>
     </div>
-</body>
     `;
 
     var ele = document.createElement("div");
